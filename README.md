@@ -27,6 +27,15 @@ ONSENUI
   **ons-navigator**: És un administrador de una pila de páginas y animador de transiciones. Las páginas que puede almacenar son del tipo ons-page, este no es visible en nuestra app  
   **ons-toolbar**: nos permite navegar por diferentes páginas, este debe incluirse dentro de ons-page
 
+  ###Uso desde javascript
+  ```javascript
+  var options = {
+    animation: 'slide', // Tipo de animación
+    onTransitionEnd: function() {} // LLamada cuando termina la animación de transición
+  };
+  myNavigator.pushPage("page2.html", options);
+  ```
+  
   
 ##2. menú desplazable
   Se usa cuando necesitamos muchas páginas en el mismo nivel 

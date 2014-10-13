@@ -7,13 +7,25 @@ ONSENUI
 
   Relación padre-hijo  
   Uso: mediante botones o enlaces  
+    
   ```html
-  <ons-navigator> o <ons-toolbar>
+  <ons-navigator title="Navigator" var="myNavigator">
+    <ons-page>
+      <ons-toolbar>
+        <div class="center">Simple Navigation</div>
+      </ons-toolbar>
+      <div style="text-align: center">
+        <br>
+        <ons-button modifier="light" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          Push Page
+        </ons-button>
+      </div>
+    </ons-page>
+  </ons-navigator>
   ```  
-  ```html
-  <ons-navigator>
-  ``` 
-  És un administrador de una pila de páginas y animador de transiciones. Las páginas que puede almacenar son del tipo ons-page
+
+  ons-navigator: És un administrador de una pila de páginas y animador de transiciones. Las páginas que puede almacenar son del tipo ons-page, este no es visible en nuestra app  
+  ons-toolbar: nos permite navegar por diferentes páginas, este debe incluirse dentro de ons-page
 
   
 ##2. menú desplazable

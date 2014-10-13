@@ -33,7 +33,10 @@ ONSENUI
     animation: 'slide', // Tipo de animación
     onTransitionEnd: function() {} // LLamada cuando termina la animación de transición
   };
+  # traer pagina al frente
   myNavigator.pushPage("page2.html", options);
+  # volver a la pagina en la pila
+  myNavigator.popPage();
   ```
   
   

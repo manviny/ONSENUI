@@ -47,7 +47,39 @@ ONSENUI
   console.log(page.options.param1); // Will return "value1"
   // page.destroy() -> quita la pagina de la pila
   ```
+####navigator.getPages()
+  ```javascript
+  // Remove the 2nd topmost page from the page stack
+  var pages = navigator.getPages();
+  pages[1].destroy();
+// Now a popPage() will display the 3rd page
+  ```
 
+####navigator.insertPage(index, page, options)
+  
+  index = 0  -> al fondo de la pila  
+  index = -1 -> debajo de la página actual    
+  ```html
+  <ons-navigator var="myNavigator">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left"><ons-back-button ng-show="myNavigator.pages.length > 1">Back</ons-back-button></div>
+        <div class="center">Navigator</div>
+      </ons-toolbar>
+  
+      <div style="text-align: center">
+        <br>
+        <ons-button modifier="light"
+                    onclick="myNavigator.insertPage(-1, 'page1.html', {param: 'value'})">
+          Insert Page Below
+        </ons-button>
+      </div>
+    </ons-page>
+  </ons-navigator> 
+  ```
+
+####navigator.resetToPage(page, options)
+  Limpia la pila y añade la página a una nueva pila  
   
 ##2. menú desplazable
   Se usa cuando necesitamos muchas páginas en el mismo nivel 

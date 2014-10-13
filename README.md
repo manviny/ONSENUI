@@ -30,15 +30,23 @@ ONSENUI
 ###Uso desde javascript
   ```javascript
   var options = {
-    animation: 'slide', // Tipo de animación
+    animation: 'slide', // Tipo de animación ( slide, lift, fade, none )
     onTransitionEnd: function() {} // LLamada cuando termina la animación de transición
   };
-  # traer pagina al frente
+  // traer pagina al frente
   myNavigator.pushPage("page2.html", options);
-  # volver a la pagina en la pila
+  // volver a la pagina en la pila
   myNavigator.popPage();
   ```
-  
+###Uso de la pila de páginas
+####navigator.getCurrentPage()
+
+  ```javascript
+  myNavigator.pushPage("page2.html", { param1: "value1", param2: "value2" });
+  var page = myNavigator.getCurrentPage();
+  console.log(page.options.param1); // Will return "value1"
+  ```
+
   
 ##2. menú desplazable
   Se usa cuando necesitamos muchas páginas en el mismo nivel 

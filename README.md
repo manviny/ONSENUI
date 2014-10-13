@@ -45,6 +45,7 @@ ONSENUI
   myNavigator.pushPage("page2.html", { param1: "value1", param2: "value2" });
   var page = myNavigator.getCurrentPage();
   console.log(page.options.param1); // Will return "value1"
+  // page.destroy() -> quita la pagina de la pila
   ```
 
   
